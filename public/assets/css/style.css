@@ -1,0 +1,287 @@
+@font-face {
+    font-family: "font-1";
+    src: url("public/assets/friz-quadrata-std-medium-5870338ec7ef8.otf'$");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: transparent;
+    background-size: auto;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+}
+
+/* input {
+    width: 200px;
+    font-family: "font-1";
+} */
+
+.scoreBoard h2 {
+    color: white;
+    font-size: 1rem;
+}
+
+.playerScore {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+.winCounter {
+    font-size: 2rem;
+}
+
+.rationScore {
+    position: absolute;
+    top: 28%;
+}
+.winRateCounter {
+    font-size: 2rem;
+}
+
+.IaScore {
+    position: absolute;
+    right: 20%;
+    top: 10%;
+}
+.loseCounter {
+    font-size: 2rem;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#video2 {
+    display: none;
+}
+
+#myGame {
+    position: absolute;
+    z-index: 1;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.logo img {
+    width: 400px;
+}
+
+p {
+    text-align: center;
+    margin: 2%;
+    font-size: 3rem;
+    color: white;
+}
+#resultImg img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 2%;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+#resultVD{
+    display: block;
+    object-fit: contain;
+}
+
+.resultImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 37%;
+}
+
+.gameContainer {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    justify-content: center;
+    /* top: 0;
+    left: 0; */
+}
+
+.btnCenter {
+    display: flex;
+    justify-content: space-evenly;
+    width: 37%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resultSize {
+    display: flex;
+    align-items: center;
+    /* margin: 2%; */
+}
+
+.resultSize img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 230px;
+}
+
+.bouton {
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    border-color: initial;
+    border-radius: 10px;
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+    margin: 1%;
+    font-size: 0;
+}
+
+#btn1 {
+    background-image: url(/public/assets/img/Malphite.png);
+    
+}
+
+#btn2 {
+    background-image: url(/public/assets/img/aniviaPaper.png);
+    
+}
+
+#btn3 {
+    background-image: url(/public/assets/img/gwen.png);
+    
+}
+
+.scoreBoard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/***************************************************/
+/***************************************************/
+/****************** MEDIA QUERY ********************/
+/***************************************************/
+/***************************************************/
+
+@media screen and (max-width: 600px) {
+body {
+    /* background-image: RGBA(0,0,0,0.35), url(/public/assets/img/maplolportrait.jpeg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.scoreBoard {
+    display: flex;
+
+}
+
+.playerScore {
+    position: initial;
+    /* top: 20%;
+    left: 0%; */
+}
+
+.rationScore {
+    position: initial;
+    /* top: 20%; */
+}
+
+.IaScore {
+    position: initial;
+    /* right: 10%;
+    top: 20%; */
+}
+
+#video2 {
+    display: block;
+}
+#video1 {
+    display: none;
+}
+.logo {
+    text-align: center;
+    margin: 2%;
+}
+.logo img {
+    width: 70%;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnCenter {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.bouton {
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    /* border: none; */
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin: 0;
+    font-size: 0;
+}
+
+#stats {
+    position: absolute;
+    right: 20;
+    top: 160px;
+}
+
+#rules {
+    position: absolute;
+    left: 20px;
+    top: 160px;
+}
+
+#resultImg img {
+    object-fit: cover;
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+}
+
+.resultSize img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 130px;
+}
+}

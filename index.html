@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/assets/css/style.css">
+    <script defer src="./public/assets/js/script.js"></script>
+    <title>SHI-FU-MI!</title>
+</head>
+<body>
+    <video id="video1" autoplay="autoplay" muted="" loop="infinite" src="/public/assets/img/animated-noxus.webm"></video>
+    <video id="video2" autoplay="autoplay" muted="" loop="infinite" src="/public/assets/img/animated-freljord.webm"></video>
+    <div id="myGame">
+        <!-- <input id="rules" type="button" value="Règles">
+        <input id="stats" type="button" value="Statistiques"> -->
+        <div class="logo">
+            <img src="./public/assets/img/LoL_Logo_Shifumi.png" alt="LoL_Logo_Shifumi">
+        </div>
+        <div class="scoreBoard">
+            <div class="playerScore">
+                <h2>Victoires</h2>
+                <p class="winCounter">0</p>
+            </div>
+            <div class="rationScore">
+                <h2>Winrate</h2>
+                <p class="winRateCounter">0%</p>
+            </div>
+            <div class="IaScore">
+                <h2>Défaites</h2>
+                <p class="loseCounter">0</p>
+            </div>
+        </div>
+        <div class="gameContainer">
+            <div class="btnCenter">
+                <button class="bouton" id="btn1">Pierre</button>
+                <button class="bouton" id="btn2">Feuille</button>
+                <button class="bouton" id="btn3">Ciseaux</button>
+            </div>
+            <div class="resultSize"><img id="resultVD" src="./public/assets/img/vs.png" alt="Versus"></div>
+            <div class="resultImg" id="resultImg"><img src="./public/assets/img/random.png" alt="Random"></div>
+            <div class="resultat" id="result"></div>
+        </div>
+    </div>
+</body>
+</html>
