@@ -3,10 +3,11 @@ let playerCount = 0;
 let IaCount = 0;
 let winrateCounter;
 let partiesCounter = 0;
+let IaCounter =0;
+let VicDefCount =0;
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', () => {
         partiesCounter++;
-        console.log(partiesCounter);
         const player = buttons[i].innerHTML;
         const IA = buttons[Math.floor(Math.random() * buttons.length)].innerHTML;
         let resultat='';
@@ -37,6 +38,7 @@ for (let i = 0; i < buttons.length; i++) {
             document.getElementById('resultVD').style.display='block';
             document.getElementById('resultVD').src='public/assets/img/victory.png';
             playerCount++;
+            VicDefCount++;
             document.querySelector('.winCounter').textContent = `${playerCount}`; 
         }   
         else {
@@ -45,6 +47,8 @@ for (let i = 0; i < buttons.length; i++) {
             document.getElementById('resultVD').src='public/assets/img/defaite.png';
             IaCount++;
             document.querySelector('.loseCounter').textContent = `${IaCount}`; 
+            IaCounter++
+            VicDefCount++;
 
             
             // document.getElementById('result').innerHTML='<img src="public/assets/img/defaite.png" alt="defaite">'
@@ -63,8 +67,7 @@ for (let i = 0; i < buttons.length; i++) {
         if (IA === 'Feuille'){
             document.getElementById('resultImg').innerHTML='<img src="public/assets/img/aniviaPaper.png" alt="Feuille">'
         }
-        console.log(IA)
-        winrateCounter = parseInt(((playerCount/partiesCounter)*100));
+        winrateCounter = parseInt((playerCount/VicDefCount)*100);
         document.querySelector('.winRateCounter').textContent = `${winrateCounter}%`;
     }
     )
